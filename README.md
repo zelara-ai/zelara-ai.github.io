@@ -14,9 +14,13 @@ This repository contains all the necessary code and resources for the Zelara AI 
 
 - **Resource Files**: Includes images, stylesheets, and other assets utilized in the web app, providing a seamless and engaging user experience.
 
+## Getting Started
+
+For instructions on how to set up and run the Zelara AI web application, please visit our [Wiki page](https://github.com/zelara-ai/zelara-ai.github.io/wiki). The Wiki provides a comprehensive guide to getting started, including installation, running the application, and navigating its features.
+
 ## Contribution Guidelines
 
-Interested in contributing to Zelara AI? We welcome contributions of all forms. Please refer to our contribution guidelines for more information on how you can be a part of this innovative project.
+We welcome contributions from the community. If you're interested in contributing to the Zelara AI project, please review our contribution guidelines for more information.
 
 ## License
 
