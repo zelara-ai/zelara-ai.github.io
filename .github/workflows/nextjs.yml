@@ -35,14 +35,14 @@ jobs:
         id: detect-package-manager
         run: |
           if [ -f "${{ github.workspace }}/web/yarn.lock" ]; then
-            echo "manager=yarn" >> $GITHUB_OUTPUT
-            echo "command=install" >> $GITHUB_OUTPUT
-            echo "runner=yarn" >> $GITHUB_OUTPUT
+            echo "manager=yarn" >> $GITHUB_ENV
+            echo "command=install" >> $GITHUB_ENV
+            echo "runner=yarn" >> $GITHUB_ENV
             exit 0
-          elif [ -f "${{ github.workspace }}/web/package.json" ]; then
-            echo "manager=npm" >> $GITHUB_OUTPUT
-            echo "command=ci" >> $GITHUB_OUTPUT
-            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
+          elif [ -f "${{ github.workspace }}/web/package-lock.json" ]; then
+            echo "manager=npm" >> $GITHUB_ENV
+            echo "command=ci" >> $GITHUB_ENV
+            echo "runner=npx --no-install" >> $GITHUB_ENV
             exit 0
           else
             echo "Unable to determine package manager"
@@ -93,4 +93,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        
