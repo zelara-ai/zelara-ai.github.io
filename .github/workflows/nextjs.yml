@@ -37,17 +37,17 @@ jobs:
           echo "Checking for yarn.lock..."
           if [ -f "${{ github.workspace }}/web/yarn.lock" ]; then
             echo "Found yarn.lock"
-            echo "manager=yarn" >> $GITHUB_ENV
-            echo "command=install" >> $GITHUB_ENV
-            echo "runner=yarn" >> $GITHUB_ENV
+            echo "::set-output name=manager::yarn"
+            echo "::set-output name=command::install"
+            echo "::set-output name=runner::yarn"
             exit 0
           fi
           echo "Checking for package-lock.json..."
           if [ -f "${{ github.workspace }}/web/package-lock.json" ]; then
             echo "Found package-lock.json"
-            echo "manager=npm" >> $GITHUB_ENV
-            echo "command=ci" >> $GITHUB_ENV
-            echo "runner=npx --no-install" >> $GITHUB_ENV
+            echo "::set-output name=manager::npm"
+            echo "::set-output name=command::ci"
+            echo "::set-output name=runner::npx --no-install"
             exit 0
           fi
           echo "Unable to determine package manager"
@@ -82,6 +82,7 @@ jobs:
             exit 1
           fi
           cd web && ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
       - name: Build with Next.js
         run: cd web && ${{ steps.detect-package-manager.outputs.runner }} next build
       # - name: Static HTML export with Next.js
