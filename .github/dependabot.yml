@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/web"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+
+  - package-ecosystem: "pip"
+    directory: "/core/plant-api"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+
+  - package-ecosystem: "pip"
+    directory: "/core/gpt-api"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
