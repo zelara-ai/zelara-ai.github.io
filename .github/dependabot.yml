@@ -6,7 +6,7 @@ updates:
       interval: "weekly"
       day: "sunday"
     reviewers: 
-      - "zelara-ai/backend-team"
+      - "zelara-ai/front-end"
 
   - package-ecosystem: "pip"
     directory: "/core/plant-api"
