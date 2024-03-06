@@ -1,39 +1,44 @@
 import Head from 'next/head'
+import React from 'react'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Zelara AI - Levi Team</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zelara-AI Landing Page</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="container">
-        <h1>Hello World! 🌍 From Levi Team 🌱</h1>
 
-        <div className="feature">
-          <h2>🌿 Plant Monitoring</h2>
-          <p>Zelara AI uses computer vision algorithms to analyze images of your plants and provide insights into their health, growth, and any potential issues they may be facing.</p>
+      <nav className="navbar">
+        <div>
+          <span>Logo</span>
         </div>
-
-        <div className="feature">
-          <h2>📊 Data Visualization</h2>
-            <p>Our dashboard allows you to visualize your plant&apos;s data in a variety of ways, including charts, graphs, and more.</p>
-          </div>
-
-        <div className="feature">
-          <h2>💡 Recommendations</h2>
-          <p>Zelara AI provides personalized recommendations on how to optimize your greenhouse conditions for the best growth outcomes.</p>
+        <div className="nav-links">
+          <a href="#">About Us</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+          <a href="#">More</a>
+          <a href="#">Learn</a>
         </div>
-
-        <div className="feature">
-          <h2>🖥️ User-friendly Interface</h2>
-          <p>Our intuitive web app interface allows for easy navigation and effective use of all features, regardless of your tech skill level.</p>
+        <div className="cta-buttons">
+          <button className="sign-up">Sign Up</button>
         </div>
+      </nav>
 
-
-        <footer>
-          <p>&copy; 2023 Levi Team 🌟</p>
-        </footer>
+      <div className="hero">
+        <div className="hero-image">
+          <img src="https://placehold.co/750x400" alt="Hero Image" />
+        </div>
+        <h1 className="headline">
+          Revolutionize greenhouse management with Zelara-AI
+        </h1>
+        <p className="subheadline">
+          Experience the power of advanced computer vision algorithms and GPT models for comprehensive plant analysis and personalized recommendations.
+        </p>
+        <div className="call-to-action">
+          <button className="learn-more">Learn More</button>
+          <button className="sign-up">Sign Up</button>
+        </div>
       </div>
     </>
   )
