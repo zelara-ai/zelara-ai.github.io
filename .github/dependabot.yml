@@ -7,19 +7,3 @@ updates:
       day: "sunday"
     reviewers: 
       - "zelara-ai/front-end"
-
-  - package-ecosystem: "pip"
-    directory: "/core/plant-api"
-    schedule:
-      interval: "weekly"
-      day: "sunday"
-    reviewers: 
-      - "zelara-ai/backend-team"
-
-  - package-ecosystem: "pip"
-    directory: "/core/gpt-api"
-    schedule:
-      interval: "weekly"
-      day: "sunday"
-    reviewers: 
-      - "zelara-ai/backend-team"
